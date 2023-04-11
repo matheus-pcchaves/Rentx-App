@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button 
+            onclick="contador()" 
+            style="color: white; 
+            background: crimson; 
+            border: none; 
+            border-radius: 5px; 
+            border-color: crimson; 
+            padding: 5px; 
+            cursor: pointer;"
+        >
+            Não aperte o botão
+        </button>
+    </body>
+    <script>
+        var numero = parseInt(prompt("Digite um número"))
+
+        function contador(){
+            if(numero < 10){
+                var quantidade = 10 - numero 
+                console.log("Esse número é menor que 10")
+                console.log("Digite mais " + quantidade + " números para atingir o valor de 10")
+            }
+
+            if(numero > 10){
+                console.log("Esse número é maior que 10")
+            }
+        }
+    </script>
+</html>
