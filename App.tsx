@@ -6,22 +6,15 @@ import {
   Inter_400Regular,
   Inter_500Medium
 } from "@expo-google-fonts/inter";
-import {
-  Archivo_400Regular,
-  Archivo_500Medium,
-  Archivo_600SemiBold
-} from "@expo-google-fonts/archivo";
 
 import { Home } from './src/screens/Home/index';
 import theme from './src/styles/theme';
+import { Loading } from './src/components/Loading';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
-    Archivo_400Regular,
-    Archivo_500Medium,
-    Archivo_600SemiBold,
   })
 
   /* if(!fontsLoaded){
@@ -30,7 +23,7 @@ export default function App() {
   
   return (
     <ThemeProvider theme={theme}>
-      <Home/>
+      {fontsLoaded ? <Home/> : <Loading/>}
     </ThemeProvider>
   );
 }
