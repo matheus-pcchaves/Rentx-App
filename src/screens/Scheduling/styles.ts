@@ -8,6 +8,7 @@ interface DateValueProps {
 
 export const Container = styled.View`
   flex: 1;
+
   background-color: ${({theme}) => theme.colors.background_secondary};
 `;
 
@@ -19,7 +20,7 @@ export const Header = styled.View`
 
   justify-content: center;
   padding: 25px;
-  padding-top: ${getStatusBarHeight() + 30}px;
+  padding-top: ${getStatusBarHeight() + 32}px;
 `;
 
 export const Title = styled.Text`
@@ -37,7 +38,7 @@ export const RentalPeriod = styled.View`
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 32px 0;
+  margin: 32px 0;
 `;
 
 export const DateInfo = styled.View`
@@ -55,18 +56,18 @@ export const DateValue = styled.Text<DateValueProps>`
   font-family: ${({theme}) => theme.fonts.primary_500};
   font-size: ${RFValue(15)}px;
 
-  ${({selected, theme}) => !selected && css`
+  ${({ selected, theme }) => !selected && css`
     border-bottom-width: 1px;
     border-bottom-color: ${theme.colors.text};
     padding-bottom: 5px;
-  `}
+  `};
 `;
 
 export const Content = styled.ScrollView.attrs({
   contentContainerStyle: {
-    paddingBottom: 24
+    paddingBottom: 24,
   },
-  showVerticalScrollIndicator: false
+  showVerticalScrollIndicator: false  
 })``;
 
 export const Footer = styled.View`
