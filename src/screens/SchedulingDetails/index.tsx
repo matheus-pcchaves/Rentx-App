@@ -104,10 +104,10 @@ export function SchedulingDetails() {
         </RentalPeriod>  
 
         <RentalPrice>
-          <RentalPriceLabel></RentalPriceLabel>
+          <RentalPriceLabel>Total</RentalPriceLabel>
           <RentalPriceDetails>
-            <RentalPriceQuota></RentalPriceQuota>
-            <RentalPriceTotal></RentalPriceTotal>
+            <RentalPriceQuota>580 x 3 diárias</RentalPriceQuota>
+            <RentalPriceTotal>R$2,900</RentalPriceTotal>
           </RentalPriceDetails>
         </RentalPrice>
       </Content>
